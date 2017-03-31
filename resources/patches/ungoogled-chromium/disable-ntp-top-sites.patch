@@ -1,0 +1,43 @@
+--- a/chrome/browser/resources/local_ntp/local_ntp.js
++++ b/chrome/browser/resources/local_ntp/local_ntp.js
+@@ -743,7 +743,7 @@
+   notification = $(IDS.NOTIFICATION);
+   attribution = $(IDS.ATTRIBUTION);
+   ntpContents = $(IDS.NTP_CONTENTS);
+-
++  return;
+   if (configData.isGooglePage) {
+     var logo = document.createElement('div');
+     logo.id = IDS.LOGO;
+
+--- a/chrome/browser/resources/local_ntp/local_ntp.html
++++ b/chrome/browser/resources/local_ntp/local_ntp.html
+@@ -4,28 +4,10 @@
+      Use of this source code is governed by a BSD-style license that can be
+      found in the LICENSE file. -->
+ <head>
+-  <link rel="stylesheet" href="chrome-search://local-ntp/theme.css"></link>
+-  <link rel="stylesheet" href="chrome-search://local-ntp/local-ntp.css"></link>
+-  <script src="chrome-search://local-ntp/config.js"></script>
+-  <script src="chrome-search://local-ntp/local-ntp.js"></script>
+   <meta charset="utf-8">
+-  <meta name="google" value="notranslate">
+ </head>
+ <body>
+   <div id="ntp-contents">
+-    <div id="most-visited">
+-      <div id="mv-tiles"></div>
+-      <!-- Notification shown when a tile is blacklisted. -->
+-      <div id="mv-notice" class="mv-notice-hide">
+-        <span id="mv-msg"></span>
+-        <!-- Links in the notification. -->
+-        <span id="mv-notice-links">
+-          <span id="mv-undo" tabIndex="1"></span>
+-          <span id="mv-restore" tabIndex="1"></span>
+-          <div id="mv-notice-x" tabIndex="1"></div>
+-        </span>
+-      </div>
+-    </div>
+     <div id="attribution"><div id="attribution-text"></div></div>
+   </div>
+ </body>
